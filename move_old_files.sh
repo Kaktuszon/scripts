@@ -16,7 +16,7 @@ for i in ${files}; do # Loop all files
         datediff=$(($today-$f))
 
         # If files is older than 14 days, remove it
-        if [ $datediff -gt 3 ]
+        if [ $datediff -gt 14 ]
         then
                 echo "Moving "$folder/$i >> delete_old_files_src.log
                 mv $folder/$i "FOLDER TO SAVE OLD FILES IN"$i
